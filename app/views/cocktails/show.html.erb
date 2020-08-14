@@ -1,1 +1,6 @@
 <h2><%= @cocktail.name %></h2>
+
+<%= link_to "Delete #{@cocktail.name}",
+            cocktail_path(@cocktail),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>

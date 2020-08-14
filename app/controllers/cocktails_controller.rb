@@ -15,6 +15,15 @@ class CocktailsController < ApplicationController
   def create
     @cocktail = Cocktail.new(cocktail_params)
     @cocktail.save
+    redirect_to cocktails_path
+  end
+
+  def destroy
+    @cocktail = Cocktail.find(params[:id])
+    @cocktail.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to cocktails_path
   end
 
   private
