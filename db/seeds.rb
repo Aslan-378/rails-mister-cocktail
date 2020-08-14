@@ -3,5 +3,17 @@
 #
 # Examples:
 #
+
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Cleaning database..."
+
+Cocktail.destroy_all
+
+puts "Creating cocktails..."
+
+Cocktail.create(name: "Mojito")
+Cocktail.create(name: "Margarita")
+Cocktail.create(name: "Screwdriver")
+
+puts "Finished!"
