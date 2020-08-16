@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   post "cocktails", to: "cocktails#create"
   get "cocktails/:id", to: "cocktails#show", as: :cocktail
   delete "cocktails/:id", to: "cocktails#destroy"
+
+  get "doses", to: "doses#index"
 end
